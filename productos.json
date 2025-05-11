@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "Franela 1",
+        "precio": 49.99,
+        "imagen": "https://i.ebayimg.com/images/g/FU4AAOSwnbhmjWTR/s-l1600.webp",
+        "categoria": "hombre"
+    },
+    {
+        "id": 2,
+        "nombre": "Franela 2",
+        "precio": 60,
+        "imagen": "https://i.ebayimg.com/images/g/s0EAAOSwJURnxUsU/s-l1600.webp",
+        "categoria": "mujer"
+    },
+    {
+        "id": 3,
+        "nombre": "Franela 3",
+        "precio": 49.99,
+        "imagen": "https://i.ebayimg.com/images/g/dJoAAOSw6HZnszB6/s-l1600.webp",
+        "categoria": "ninos"
+    },
+    {
+        "id": 4,
+        "nombre": "Franela 4",
+        "precio": 49.99,
+        "imagen": "https://i.ebayimg.com/images/g/dJoAAOSw6HZnszB6/s-l1600.webp",
+        "categoria": "ninos"
+    },
+    {
+        "id": 5,
+        "nombre": "Franela 5",
+        "precio": 49.99,
+        "imagen": "https://i.ebayimg.com/images/g/dJoAAOSw6HZnszB6/s-l1600.webp",
+        "categoria": "ninos"
+    }
+    
+]
