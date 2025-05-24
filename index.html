@@ -6,15 +6,43 @@
     <title>Catálogo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
+<!-- Botón FAB del carrito -->
+<div id="cart-fab">
+    <button id="cart-fab-button">
+        <span id="cart-fab-count">0</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+    </button>
+    
+    <div id="cart-fab-content">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart">&times;</button>
+        </div>
+        <ul id="carrito-items"></ul>
+        <div class="cart-footer">
+            <p>Total: $<span id="carrito-total">0.00</span></p>
+            <button id="enviar-whatsapp">Enviar por WhatsApp</button>
+        </div>
+    </div>
+</div>
+
+
 <body>
     <header>
         <nav>
-            <div class="logo">Teffy's</div>
+            <div class="logo">Zsteph’s Beauty</div>
             <div class="nav-links">
-                <a href="#">Mujer</a>
-                <a href="#">Hombre</a>
-                <a href="#">Niños</a>
-                <a href="#">Ofertas</a>
+                <a href="#">Inicio</a>
+                <a href="#">Quienes Somos</a>
+                <a href="#">Contacto</a>
+                
+
+                
             </div>
             <div class="menu-toggle">☰</div>
         </nav>

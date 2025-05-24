@@ -1,38 +1,51 @@
 [
     {
         "id": 1,
-        "nombre": "Franela 1",
-        "precio": 49.99,
-        "imagen": "https://i.ebayimg.com/images/g/FU4AAOSwnbhmjWTR/s-l1600.webp",
-        "categoria": "hombre"
+        "nombre": "Base de Maquillaje Líquida Matte",
+        "precio": 29.99,
+        "imagen": "https://images.unsplash.com/photo-1617897903246-719242758050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        "categoria": "maquillaje",
+        "marca": "L'Oréal"
     },
     {
         "id": 2,
-        "nombre": "Franela 2",
-        "precio": 60,
-        "imagen": "https://i.ebayimg.com/images/g/s0EAAOSwJURnxUsU/s-l1600.webp",
-        "categoria": "mujer"
+        "nombre": "Paleta de Sombras Neutras",
+        "precio": 35.50,
+        "imagen": "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        "categoria": "maquillaje",
+        "marca": "Urban Decay"
     },
     {
         "id": 3,
-        "nombre": "Franela 3",
-        "precio": 49.99,
-        "imagen": "https://i.ebayimg.com/images/g/dJoAAOSw6HZnszB6/s-l1600.webp",
-        "categoria": "ninos"
+        "nombre": "Serum Facial de Vitamina C",
+        "precio": 22.99,
+        "imagen": "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "categoria": "cuidado_facial",
+        "marca": "The Ordinary"
     },
     {
         "id": 4,
-        "nombre": "Franela 4",
-        "precio": 49.99,
-        "imagen": "https://i.ebayimg.com/images/g/dJoAAOSw6HZnszB6/s-l1600.webp",
-        "categoria": "ninos"
+        "nombre": "Labial Líquido Matte Rojo",
+        "precio": 15.75,
+        "imagen": "https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "categoria": "maquillaje",
+        "marca": "Maybelline"
     },
     {
         "id": 5,
-        "nombre": "Franela 5",
-        "precio": 49.99,
-        "imagen": "https://i.ebayimg.com/images/g/dJoAAOSw6HZnszB6/s-l1600.webp",
-        "categoria": "ninos"
+        "nombre": "Crema Hidratante con SPF 50",
+        "precio": 27.40,
+        "imagen": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        "categoria": "cuidado_facial",
+        "marca": "CeraVe"
+    },
+    {
+        "id": 6,
+        "nombre": "Máscara de Pestañas Volumizadora",
+        "precio": 12.99,
+        "imagen": "https://images.pexels.com/photos/3373739/pexels-photo-3373739.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "categoria": "maquillaje",
+        "marca": "Essence"
     }
     
 ]
