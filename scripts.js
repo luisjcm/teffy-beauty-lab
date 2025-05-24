@@ -18,7 +18,7 @@ document.getElementById('close-cart').addEventListener('click', (e) => {
     function actualizarCarrito() {
         const carritoItems = document.getElementById('carrito-items');
         const carritoTotal = document.getElementById('carrito-total');
-        const carritoContador = document.getElementById('carrito-contador');
+        const carritoContador = document.getElementById('cart-fab-count');
         
         // Limpiar items anteriores
         carritoItems.innerHTML = '';
@@ -61,6 +61,10 @@ document.getElementById('close-cart').addEventListener('click', (e) => {
     // Función para agregar producto al carrito
     function agregarAlCarrito(producto) {
         const productoExistente = carrito.find(item => item.id === producto.id);
+
+        const fabButton = document.getElementById('cart-fab-button');
+        fabButton.classList.add('shake');
+        setTimeout(() => fabButton.classList.remove('shake'), 400);
         
         if (productoExistente) {
             productoExistente.cantidad += 1;
@@ -142,37 +146,26 @@ document.getElementById('close-cart').addEventListener('click', (e) => {
         window.open(`https://wa.me/?text=${mensaje}`, '_blank');
     });
 
-    function agregarAlCarrito(producto) {
-    const productoExistente = carrito.find(item => item.id === producto.id);
-    
-    if (productoExistente) {
-        productoExistente.cantidad += 1;
-    } else {
-        carrito.push({
-            ...producto,
-            cantidad: 1
-        });
-    }
-    
-    actualizarCarrito();
-    
-    // Mostrar notificación
-    const notification = document.createElement('div');
-    notification.className = 'notification';
-    notification.textContent = `${producto.nombre} agregado al carrito`;
-    document.body.appendChild(notification);
-    
-    setTimeout(() => {
-        notification.remove();
-    }, 2000);
-}
+  
 
     // Event delegation para eliminar items del carrito
     document.getElementById('carrito-items').addEventListener('click', (e) => {
         if (e.target.classList.contains('eliminar-item')) {
             const index = e.target.getAttribute('data-index');
+            const productoEliminado = carrito[index]; // Captura nombre
+
             carrito.splice(index, 1);
             actualizarCarrito();
+
+            // Mostrar notificación de eliminación
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = `${productoEliminado.nombre} eliminado del carrito`;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.remove();
+        }, 2000);
         }
     });
 
