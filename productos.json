@@ -1,51 +1,75 @@
 [
     {
         "id": 1,
-        "nombre": "Base de Maquillaje Líquida Matte",
-        "precio": 29.99,
-        "imagen": "https://images.unsplash.com/photo-1617897903246-719242758050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        "categoria": "maquillaje",
-        "marca": "L'Oréal"
+        "nombre": "Crema de manos de aloe vera",
+        "precio": 0.63,
+        "imagen": "img/prod1.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER"
     },
     {
         "id": 2,
-        "nombre": "Paleta de Sombras Neutras",
-        "precio": 35.50,
-        "imagen": "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        "categoria": "maquillaje",
-        "marca": "Urban Decay"
+        "nombre": "Crema hidratante de acido salicílico",
+        "precio": 3.69,
+        "imagen": "img/prod2.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER"
     },
     {
         "id": 3,
-        "nombre": "Serum Facial de Vitamina C",
-        "precio": 22.99,
-        "imagen": "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "nombre": "Crema hidratante de colágeno",
+        "precio": 3.94,
+        "imagen": "img/prod3.jpg",
         "categoria": "cuidado_facial",
-        "marca": "The Ordinary"
+        "marca": "SADOER"
     },
     {
         "id": 4,
-        "nombre": "Labial Líquido Matte Rojo",
-        "precio": 15.75,
-        "imagen": "https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "categoria": "maquillaje",
-        "marca": "Maybelline"
+        "nombre": "Crema depilatoria suavizante",
+        "precio": 2.06,
+        "imagen": "img/prod4.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER"
     },
     {
         "id": 5,
-        "nombre": "Crema Hidratante con SPF 50",
-        "precio": 27.40,
-        "imagen": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        "nombre": "Mascarilla aclarante con arbutina y nicotinamida",
+        "precio": 0.50,
+        "imagen": "img/prod5.jpg",
         "categoria": "cuidado_facial",
-        "marca": "CeraVe"
+        "marca": "SADOER"
     },
     {
         "id": 6,
-        "nombre": "Máscara de Pestañas Volumizadora",
-        "precio": 12.99,
-        "imagen": "https://images.pexels.com/photos/3373739/pexels-photo-3373739.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "categoria": "maquillaje",
-        "marca": "Essence"
+        "nombre": "Protector solar unseen ",
+        "precio": 2.56,
+        "imagen": "img/prod6.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER"
+    },
+     {
+        "id": 7,
+        "nombre": "Protector solar unseen ",
+        "precio": 2.56,
+        "imagen": "img/prod6.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER"
+    },
+     {
+        "id": 8,
+        "nombre": "Protector solar unseen ",
+        "precio": 2.56,
+        "imagen": "img/prod6.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER"
+    },
+     {
+        "id": 9,
+        "nombre": "Protector solar unseen ",
+        "precio": 2.56,
+        "imagen": "img/prod6.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER"
     }
     
 ]
