@@ -9,12 +9,16 @@
 
         /* Estilos generales */
         body {
-            background-color: #363636;
+            background-color: #121212;
         }
+
+        html {
+         scroll-behavior: smooth;
+}
 
         /* Header */
         header {
-            background-color: #313030;
+            background-color: #1C1C1C;
             padding: 1rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
@@ -55,7 +59,7 @@
         .hero {
             height: 400px;
             background: linear-gradient(rgba(1, 5, 4, 0.3), rgba(0, 0, 7, 0.651)), 
-                        url('img/banner3.jpg');
+                        url('img/banner teffys.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -82,7 +86,7 @@
         }
 
         .product-card {
-            background: rgb(73, 73, 73);
+            background: #2B2B2B;
             border-radius: 10px;
             overflow: hidden;
             transition: transform 0.3s;
@@ -256,28 +260,55 @@
 
 /* Estilos para los botones de productos */
 .btn-add-to-cart {
-    background: #ff6b6b;
-    color: white;
+    background: #E8B4B8;
+    color: #000;
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
     margin-right: 5px;
+    transition: background 0.6s ease; /* Agrega esta línea */
+
 }
 
-.btn-view-details {
-    background: #4ecdc4;
-    color: white;
+.btn-add-to-cart:hover {
+    background: #813333;
+    color: #fff;
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    margin-right: 5px;
+    transition: background 0.6s ease; /* Agrega esta línea */
+
 }
 
+.btn-view-details {
+    background: #B8E4C9;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.6s ease; /* Agrega esta línea */
 
-        
+}
+
+.btn-view-details:hover {
+    background: #56806d;
+    color: #f3f3f3;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.6s ease; /* Agrega esta línea */
+
+}
+
 /* Estilos para el FAB del carrito */
 #cart-fab {
     position: fixed;
@@ -290,7 +321,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #ff6b6b;
+    background: #C8A038;
     color: white;
     border: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -330,7 +361,8 @@
     width: 320px;
     max-height: 0;
     overflow: hidden;
-    background: white;
+    background: #2B2B2B;
+    color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
@@ -379,17 +411,47 @@
     border-top: 1px solid #eee;
 }
 
-#enviar-whatsapp {
-    width: 100%;
-    padding: 10px;
-    background: #25D366;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-    font-weight: bold;
+
+.cart-actions-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
 }
+
+.cart-actions-row .action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+/* WhatsApp */
+.cart-actions-row .whatsapp {
+  background-color: #25D366;
+}
+.cart-actions-row .whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+/* Email */
+.cart-actions-row .email {
+  background-color: #2B2B2B;
+}
+.cart-actions-row .email:hover {
+  background-color: #2a2a2a;
+}
+
+
+
 
 button:active, .btn-add-to-cart:active, .btn-view-details:active {
     transform: scale(0.96);
@@ -406,4 +468,167 @@ button:active, .btn-add-to-cart:active, .btn-view-details:active {
 
 #cart-fab-button.shake {
     animation: shake 0.4s;
+}
+
+
+/* Modal base */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+
+}
+
+.modal-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+}
+
+.modal-price {
+    font-weight: bold;
+    color: #e91e63;
+    margin-top: 1rem;
+}
+
+#modal-add-to-cart {
+    margin-top: 1rem;
+    background-color: #e85a5a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/*Efectos a los botones*/
+button:hover,
+.btn-add-to-cart:hover,
+.btn-view-details:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+
+.quienes-somos {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 4rem 1rem;
+}
+
+.quienes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+.quienes-texto {
+    flex: 1 1 500px;
+    padding: 1rem;
+}
+
+.quienes-texto h2 {
+    font-size: 2.5rem;
+    color: #e91e63;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.quienes-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #f0f0f0;
+}
+
+.quienes-imagen {
+    flex: 1 1 400px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.quienes-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quienes-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .quienes-imagen {
+        justify-content: center;
+    }
+}
+
+.titulo-productos {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.titulo-productos h2 {
+  font-size: 2.4rem;
+  color: #E91E63;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.titulo-productos p {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto;
 }

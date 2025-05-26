@@ -6,70 +6,109 @@
     <title>Catálogo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
-<!-- Botón FAB del carrito -->
-<div id="cart-fab">
-    <button id="cart-fab-button">
-        <span id="cart-fab-count">0</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-        </svg>
-    </button>
-    
-    <div id="cart-fab-content">
-        <div class="cart-header">
-            <h3>Tu Carrito</h3>
-            <button id="close-cart">&times;</button>
-        </div>
-        <ul id="carrito-items"></ul>
-        <div class="cart-footer">
-            <p>Total: $<span id="carrito-total">0.00</span></p>
-            <button id="enviar-whatsapp">Enviar por WhatsApp</button>
-        </div>
-    </div>
-</div>
-
-
 <body>
     <header>
         <nav>
             <div class="logo">Teffy's</div>
             <div class="nav-links">
-                <a href="#">Inicio</a>
-                <a href="#">Quienes Somos</a>
-                <a href="#">Contacto</a>
-                
-
-                
+                <a href="./index.html">Inicio</a>
+                <a href="#quienes-somos">Quienes Somos</a>
+                <a href="#titulo-productos">Productos</a>
             </div>
             <div class="menu-toggle">☰</div>
         </nav>
     </header>
 
     <section class="hero">
+
         <div>
-            <h1>Nuevo catálogo 2025</h1>
-            <button id="btn-ver-mas">Ver Más</button>
+            <!-- <button id="btn-ver-mas">Ver Más</button> -->
         </div>
     </section>
 
+    <section class="quienes-somos" id="quienes-somos">
+  <div class="quienes-grid">
+    <div class="quienes-texto">
+      <h2>Quiénes Somos</h2>
+      <p>
+        En <strong>Teffy's</strong> nos apasiona realzar la belleza natural a través de productos de cuidado personal y cosméticos cuidadosamente seleccionados.
+      </p>
+      <p>
+        Nacimos con la misión de ofrecer calidad, confianza y estilo al alcance de todos. Nuestra tienda fue creada pensando en ti, que buscas sentirte bien y lucir espectacular cada día.
+      </p>
+    </div>
+    <div class="quienes-imagen">
+      <img src="img/fototeffy.jpg" alt="Equipo Teffy's">
+    </div>
+  </div>
+</section>
+
+
+<section class="titulo-productos" id="titulo-productos">
+  <h2>Catálogo de Productos</h2>
+  <p>Explora nuestra colección cuidadosamente seleccionada para resaltar tu belleza natural.</p>
+</section>
     <main class="products-grid" id="products-container">
-                <!-- Los productos se cargarán aquí dinámicamente -->
+
+
+        <!-- Los productos se cargarán aquí dinámicamente -->
     </main>
 
+    
+
+
     <footer>
-        <p>Contacto: teffy@gmail.com</p>
+        <p>Contacto: ventasteffy25@gmail.com</p>
         <p>Síguenos en redes sociales</p>
         <div style="margin-top: 1rem;">
-            <a href="#" style="color: white; margin: 0 0.5rem;">Instagram: Teffy</a>
-            <a href="#" style="color: white; margin: 0 0.5rem;">Facebook: Teffy</a>
+            <a href="https://www.instagram.com/teffy1410/" style="color: white; margin: 0 0.5rem;">Instagram: Teffy</a>
+            <a href="https://www.facebook.com/zstephanie.rodriguez" style="color: white; margin: 0 0.5rem;">Facebook: Stephanie Rodriguez</a>
         </div>
-
     </footer>
 
-        <script src="scripts.js"></script>
+    <!-- Modal Detalles Producto -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" class="modal-image" src="" alt="Producto">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p class="modal-price">Precio: $<span id="modal-price"></span></p>
+            <button id="modal-add-to-cart">Agregar al carrito</button>
+        </div>
+    </div>
 
+    <!-- FAB del carrito y dropdown de envío -->
+    <div id="cart-fab">
+        <button id="cart-fab-button">
+            <span id="cart-fab-count">0</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+        </button>
+
+        <div id="cart-fab-content">
+            <div class="cart-header">
+                <h3>Tu Carrito</h3>
+                <button id="close-cart">&times;</button>
+            </div>
+            <ul id="carrito-items"></ul>
+            <div class="cart-footer">
+                <p>Total: $<span id="carrito-total">0.00</span></p>
+                <div class="cart-actions-row">
+  <button id="enviar-whatsapp" class="action-btn whatsapp">
+    📱 WhatsApp
+  </button>
+  <button id="enviar-email" class="action-btn email">
+    📩 Email
+  </button>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
