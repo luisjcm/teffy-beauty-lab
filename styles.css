@@ -16,6 +16,10 @@
          scroll-behavior: smooth;
 }
 
+.menu-toggle{
+    color: #ffffff;
+}
+
         /* Header */
         header {
             background-color: #1C1C1C;
@@ -45,6 +49,31 @@
             gap: 2rem;
         }
 
+        @media (max-width: 768px) {
+
+            
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #1C1C1C;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                padding: 1rem;
+                z-index: 200;
+            }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .products-section{
+    margin-top: 10rem;
+  }
+}
+
         .nav-links a {
             text-decoration: none;
             color: #fafafa;
@@ -57,7 +86,7 @@
 
         /* Hero Section */
         .hero {
-            height: 400px;
+            min-height: 400px;
             background: linear-gradient(rgba(1, 5, 4, 0.3), rgba(0, 0, 7, 0.651)), 
                         url('img/banner teffys.png');
             background-size: cover;
@@ -69,6 +98,18 @@
             color: white;
             padding: 1rem;
         }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                padding: 3rem 1rem;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            }
 
         .hero h1 {
             font-size: 2.5rem;

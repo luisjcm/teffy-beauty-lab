@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+
+    
     const productsContainer = document.getElementById('products-container');
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
@@ -6,10 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('cart-fab-content').classList.add('show');
     });
 
+    
+
     document.getElementById('close-cart').addEventListener('click', (e) => {
         e.stopPropagation();
         document.getElementById('cart-fab-content').classList.remove('show');
     });
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+    
 
     function actualizarCarrito() {
         const carritoItems = document.getElementById('carrito-items');
