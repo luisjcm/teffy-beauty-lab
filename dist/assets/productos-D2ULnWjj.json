@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "nombre": "Crema de manos de aloe vera",
+        "precio": 0.63,
+        "imagen": "img/prod1.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER",
+        "descripcion": "Esta crema es ideal para llevar en tu bolso a todos lados, la mejor para hidratar nuestras manos, se absorbe rapidamente dejando una piel suave y sedosa. Tamaño: 30g"
+    },
+    {
+        "id": 2,
+        "nombre": "Crema hidratante de acido salicílico",
+        "precio": 3.69,
+        "imagen": "img/prod2.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER",
+        "descripcion": "Esta crema con ácido salicílico es eficaz para combatir el acné, ya que penetra en los poros para eliminar las impurezas y reducir la inflamación. Se recomienda utilizar en las noches y aplicar protector solar al dia siguiente despues de lavar bien el rostro. Tamaño: 60g"
+    },
+    {
+        "id": 3,
+        "nombre": "Crema hidratante de colágeno",
+        "precio": 3.94,
+        "imagen": "img/prod3.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER",
+        "descripcion": "Esta crema antienvejecimiento ayuda a reponer el colageno, aumenta la elasticidad, hidrata y repara a profundidad la piel. Tamaño: 100g"
+    },
+    {
+        "id": 4,
+        "nombre": "Crema depilatoria suavizante",
+        "precio": 2.06,
+        "imagen": "img/prod4.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER",
+        "descripcion": "Esta crema permite retirar el vello 10 minutos de manera suave, fácil y eficaz, dejando su piel sedosa y agradable al tacto, evitando la irritación, el riesgo de cortes y la textura aspera que causa las cuchillas de afeitar, se debe enjuagar con abundante agua. No se debe utilizar en zonas aporreadas o muy sensibles de la piel. Trae su palita para aplicar y retirar.Puede aplicarse en espalda, pecho, abdomen, brazos, área del bikini, glúteos, muslos, piernas, pies y axilas. Tamaño: 50g"
+    },
+    {
+        "id": 5,
+        "nombre": "Mascarilla aclarante con arbutina y nicotinamida",
+        "precio": 0.50,
+        "imagen": "img/prod5.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER",
+        "descripcion": "Esta mascarilla permite hidratar y nutrir tu rostro. Es perfecta para cuidarlo y mantenerlo sano. Se recomienda utilizar 2 veces a la semana. Si eres de las personas que se maquillan constantemente son perfectas para mantener tu piel fuerte y revitalizada. Tamaño: 25mL"
+    },
+    {
+        "id": 6,
+        "nombre": "Protector solar unseen",
+        "precio": 2.56,
+        "imagen": "img/prod6.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER",
+        "descripcion": "Mantiene la piel sana, natural y bonita. Las cremas solares ayudan a cuidar la piel contra los daños a largo plazo, como arrugas o quemaduras solares, también ayuda a mantener un tono de piel uniforme y briilante. Tamaño: 40g"
+    },
+     {
+        "id": 7,
+        "nombre": "Agua micelar de rosas",
+        "precio": 4.63,
+        "imagen": "img/prod7.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "TAILAIMEI",
+        "descripcion": "Ayuda a desmaquillar, limpiar la piel y balancear el ph. Cuida la piel y la deja suave. Tamaño: 330mL"
+    },
+     {
+        "id": 8,
+        "nombre": "Crema hidratante antiarrugas con retinol y cafeina",
+        "precio": 3.63,
+        "imagen": "img/prod8.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER",
+        "descripcion": "Su textura es humeda pero no grasa, contiene retinol, cafeina y otros ingredientes que ayudan a combatir las arrugas de la piel, haciendola lucir mas suave y hermosa. Tamaño: 50g"
+    },
+     {
+        "id": 9,
+        "nombre": "Kit facial de ácido hialurónico ",
+        "precio": 24.25,
+        "imagen": "img/prod9.jpg",
+        "categoria": "cuidado_facial",
+        "marca": "SADOER",
+        "descripcion": "Este kit contiene: 1 Toner, 1 Lotion, 1 Jabon facial, 1 Serum, 1 Crema hidratante, 1 Contorno de ojos. El ácido hialurónico en el rostro sirve para hidratar la piel, reducir arrugas y líneas finas, mejorar la elasticidad y firmeza, y aportar un aspecto más joven y saludable"
+    }
+    
+]

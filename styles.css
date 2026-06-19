@@ -16,105 +16,9 @@
          scroll-behavior: smooth;
 }
 
-.menu-toggle{
-    color: #ffffff;
-}
-
-        /* Header */
-        header {
-            background-color: #1C1C1C;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ffffff;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        @media (max-width: 768px) {
-
-            
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #1C1C1C;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                width: 100%;
-                padding: 1rem;
-                z-index: 200;
-            }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .products-section{
-    margin-top: 10rem;
-  }
-}
-
-        .nav-links a {
-            text-decoration: none;
-            color: #fafafa;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #666;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 400px;
-            background: linear-gradient(rgba(1, 5, 4, 0.3), rgba(0, 0, 7, 0.651)), 
-                        url('img/banner teffys.png');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                height: auto;
-                padding: 3rem 1rem;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+                .products-section{
+                    margin-top: 10rem;
+                }
 
         /* Product Grid */
         .products-grid {
@@ -166,30 +70,11 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
             .products-grid {
                 grid-template-columns: 1fr;
             }
-
-            .menu-toggle {
-                display: block;
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
         }
 
-        @media (min-width: 769px) {
-            .menu-toggle {
-                display: none;
-            }
-        }
     
 
         /* Estilos del boton */
