@@ -18,14 +18,14 @@ const itemVariants = {
 export function ProductGrid({ products, onAddToCart, onViewDetails }) {
   return (
     <section id="catalogo-productos" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-rose-400">Catálogo</p>
           <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
             Productos pensados para un look de alto impacto.
           </h2>
         </div>
-        <p className="max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base">
+        <p className="max-w-2xl  leading-7 text-zinc-400 sm:text-base">
           Una selección curada con tarjetas animadas, acciones directas y una experiencia visual más limpia que la versión vanilla.
         </p>
       </div>
