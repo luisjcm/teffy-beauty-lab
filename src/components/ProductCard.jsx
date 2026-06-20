@@ -14,7 +14,7 @@ export function ProductCard({ product, onAddToCart, onViewDetails, variants }) {
       variants={variants}
       whileHover={{ y: -6, scale: 1.02 }}
       transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-      className="group overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 shadow-2xl shadow-rose-500/20 backdrop-blur-xl"
+      className="group overflow-hidden rounded-[1.75rem] ring-1 ring-inset ring-white/10 bg-white/5 shadow-2xl shadow-rose-500/20 backdrop-blur-xl transform-gpu"
     >
       <div className="relative overflow-hidden">
         <img

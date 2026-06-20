@@ -8,6 +8,7 @@ import { CartDrawer } from './components/CartDrawer.jsx';
 import { Footer } from './components/Footer.jsx';
 import { Toast } from './components/Toast.jsx';
 import { products } from './data/products.js';
+import { FloatingCart } from './components/FloatingCart';
 
 const storageKey = 'teffy-cart';
 const whatsappNumber = '584126099909';
@@ -183,7 +184,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative flex min-h-screen flex-col overflow-hidden bg-zinc-900 text-zinc-100">
+    <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-zinc-900 text-zinc-100">
       <div className="pointer-events-none absolute left-[-10%] top-[-10%] h-72 w-72 rounded-full bg-rose-500/10 blur-3xl" />
       <div className="pointer-events-none absolute right-[-10%] top-40 h-72 w-72 rounded-full bg-amber-400/10 blur-3xl" />
 
@@ -235,6 +236,12 @@ export default function App() {
         onRemove={removeFromCart}
         onSendWhatsApp={sendWhatsAppOrder}
         onSendEmail={sendEmailOrder}
+      />
+
+
+      <FloatingCart 
+        cartCount={cartCount} 
+        onOpenCart={() => setIsCartOpen(true)} 
       />
     </div>
   );
