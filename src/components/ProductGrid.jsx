@@ -33,9 +33,9 @@ export function ProductGrid({ products, onAddToCart, onViewDetails }) {
       <motion.div
         variants={gridVariants}
         initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+        animate="show"
+        key={products.length} // Esto fuerza a React a redibujar si la lista de productos cambia
+        className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
       >
         {products.map((product) => (
           <ProductCard
