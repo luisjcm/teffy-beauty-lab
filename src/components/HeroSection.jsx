@@ -31,37 +31,41 @@ export function HeroSection({ onBrowseProducts, onOpenCart }) {
           </div>
 
           {/* Botones de Acción */}
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex w-full flex-row gap-3 sm:mt-10">
             <button
               type="button"
               onClick={onBrowseProducts}
-              className="rounded-full bg-brand-primary px-6 py-3 font-bold text-white shadow-xl shadow-brand-primary/20 transition hover:scale-[1.02] hover:bg-brand-primary/90"
-            >
+              className="flex-1 rounded-2xl bg-brand-primary py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-primary/20 transition-transform active:scale-95"            >
               Ver productos
             </button>
             <button
               type="button"
               onClick={onOpenCart}
-              className="rounded-full border-2 border-brand-muted/30 bg-brand-surface px-6 py-3 font-bold text-brand-text shadow-sm transition hover:border-brand-primary hover:text-brand-primary"
-            >
+              className="flex-1 rounded-2xl bg-brand-surface py-3.5 text-sm font-bold text-brand-text shadow-sm ring-1 ring-inset ring-brand-muted/20 transition-transform active:scale-95"            >
               Mi carrito
             </button>
           </div>
 
           {/* Grid de Atributos de la Tienda */}
-          <div className="mt-10 grid w-full max-w-2xl grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl border border-brand-muted/20 bg-brand-surface p-4 shadow-sm">
-              <p className="text-sm text-brand-text">Productos</p>
-              <p className="mt-1 text-lg font-bold text-brand-text">100% Originales</p>
-            </div>
-            <div className="rounded-2xl border border-brand-muted/20 bg-brand-surface p-4 shadow-sm">
-              <p className="text-sm text-brand-text">Envíos</p>
-              <p className="mt-1 text-lg font-bold text-brand-text">Nacionales</p>
-            </div>
-            <div className="rounded-2xl border border-brand-muted/20 bg-brand-surface p-4 shadow-sm">
-              <p className="text-sm text-brand-text">Asesoría</p>
-              <p className="mt-1 text-lg font-bold text-brand-text">Personalizada</p>
-            </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-3 sm:mt-10 sm:gap-6">
+            
+            {/* Globo 1 */}
+              <div className="flex flex-col items-center justify-center rounded-3xl border border-brand-muted/10 bg-brand-surface px-5 py-2.5 shadow-sm transition-transform hover:scale-105 sm:rounded-2xl sm:px-6 sm:py-4">
+                <p className="text-[10px] uppercase tracking-wider text-brand-muted sm:text-xs">Productos</p>
+                <p className="text-sm font-bold text-brand-text sm:mt-1 sm:text-lg">100% Originales</p>
+              </div>
+
+              {/* Globo 2 */}
+              <div className="flex flex-col items-center justify-center rounded-3xl border border-brand-muted/10 bg-brand-surface px-5 py-2.5 shadow-sm transition-transform hover:scale-105 sm:rounded-2xl sm:px-6 sm:py-4">
+                <p className="text-[10px] uppercase tracking-wider text-brand-muted sm:text-xs">Envíos</p>
+                <p className="text-sm font-bold text-brand-text sm:mt-1 sm:text-lg">Nacionales</p>
+              </div>
+
+              {/* Globo 3 */}
+              <div className="flex flex-col items-center justify-center rounded-3xl border border-brand-muted/10 bg-brand-surface px-5 py-2.5 shadow-sm transition-transform hover:scale-105 sm:rounded-2xl sm:px-6 sm:py-4">
+                <p className="text-[10px] uppercase tracking-wider text-brand-muted sm:text-xs">Asesoría</p>
+                <p className="text-sm font-bold text-brand-text sm:mt-1 sm:text-lg">Personalizada</p>
+              </div>
           </div>
         </motion.div>
       </div>

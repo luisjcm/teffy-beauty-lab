@@ -7,67 +7,61 @@ function truncateDescription(description) {
   return `${description.slice(0, 117)}...`;
 }
 
-export function ProductCard({ product, onAddToCart, onViewDetails, variants }) {
+export function ProductCard({ product, onAddToCart, onViewDetails }) {
   return (
-    <motion.article
-      variants={variants}
-      whileHover={{ y: -6, scale: 1.02 }}
-      transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-      className="group overflow-hidden rounded-[1.75rem] border border-brand-muted/20 bg-brand-surface shadow-sm transition-all hover:shadow-xl hover:shadow-brand-muted/10 transform-gpu flex flex-col"
-    >
-      <div className="relative overflow-hidden bg-brand-background/30">
-        <img
-          src={product.imagen}
-          alt={product.nombre}
-          className="h-64 w-full object-cover transition duration-700 group-hover:scale-105 mix-blend-multiply"
+    <article className="group flex h-full flex-col overflow-hidden rounded-[1.25rem] border border-brand-muted/10 bg-brand-surface shadow-sm transition-all hover:border-brand-primary/20 hover:shadow-md">
+      
+      {/* Contenedor de imagen de altura fija */}
+      <div 
+        className="relative aspect-[4/5] w-full cursor-pointer overflow-hidden sm:aspect-square"
+        onClick={onViewDetails}
+      >
+        <img 
+          src={product.imagen} 
+          alt={product.nombre} 
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" 
         />
-        {/* Etiqueta de Marca (Badge) */}
-        <div className="absolute left-4 top-4 rounded-full border border-brand-muted/10 bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-[0.24em] text-brand-text shadow-sm backdrop-blur-md">
-          {product.marca}
+        {/* Badge flotante compacto */}
+        <div className="absolute left-2 top-2 rounded-lg bg-white/90 px-2 py-1 text-[9px] font-black uppercase tracking-wider text-green-600 backdrop-blur-md sm:text-[10px]">
+          Stock
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col space-y-4 p-6">
-        <div>
-          <p className="text-xs font-bold uppercase tracking-[0.24em] text-brand-text">
-            {product.categoria.replace('_', ' ')}
-          </p>
-          <h3 className="mt-2 text-lg font-bold leading-tight text-brand-text line-clamp-2">
-            {product.nombre}
-          </h3>
-        </div>
-
-        <p className="flex-1 text-sm leading-6 text-brand-text">
-          {truncateDescription(product.descripcion)}
+      {/* Información compacta */}
+      <div className="flex flex-1 flex-col p-3 sm:p-5">
+        <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-brand-muted sm:text-[10px]">
+          {product.categoria.replace('_', ' ')}
         </p>
-
-        <div className="flex items-center justify-between gap-4 pt-2">
-          <p className="text-2xl font-black text-brand-primary">
+        
+        <h3 
+          className="mt-1 line-clamp-2 cursor-pointer text-xs font-bold leading-tight text-brand-text sm:text-sm"
+          onClick={onViewDetails}
+        >
+          {product.nombre}
+        </h3>
+        
+        <div className="mt-auto flex items-center justify-between pt-3">
+          <p className="text-sm font-black text-brand-primary sm:text-lg">
             ${product.precio.toFixed(2)}
           </p>
-          <div className="inline-flex items-center rounded-full bg-green-50 px-3 py-1 text-xs font-bold text-green-700 ring-1 ring-inset ring-green-600/20">
-            Stock disponible
-          </div>
-        </div>
-
-        {/* Botones de Acción - Nueva Jerarquía */}
-        <div className="flex flex-col gap-3 pt-2 sm:flex-row">
-          <button
-            type="button"
-            onClick={() => onAddToCart(product)}
-            className="w-full rounded-xl bg-brand-primary px-4 py-3 text-sm font-bold text-white shadow-md shadow-brand-primary/20 transition-all hover:bg-brand-primary/90 hover:shadow-lg hover:shadow-brand-primary/30"
+          
+          {/* Botón dinámico: Icono en móvil, Texto en Desktop */}
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              onAddToCart();
+            }} 
+            // Cambiamos transition-transform por transition-all y agregamos la elevación y la sombra brillante
+            className="flex h-8 w-8 items-center justify-center rounded-xl bg-brand-primary text-white shadow-sm transition-all hover:-translate-y-1 hover:bg-brand-primary hover:text-white hover:shadow-md hover:shadow-brand-primary/30 sm:h-10 sm:w-auto sm:px-4"
+            aria-label="Añadir al carrito"
           >
-            Al carrito
-          </button>
-          <button
-            type="button"
-            onClick={() => onViewDetails(product)}
-            className="w-full rounded-xl border border-brand-muted/30 bg-transparent px-4 py-3 text-sm font-bold text-brand-text transition-colors hover:border-brand-primary hover:text-brand-primary"
-          >
-            Detalles
+            <span className="hidden text-sm font-bold sm:inline">Agregar</span>
+            <svg className="h-4 w-4 sm:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 4v16m8-8H4" />
+            </svg>
           </button>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }

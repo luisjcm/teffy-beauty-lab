@@ -126,7 +126,8 @@ export default function App() {
   const addToCart = (product) => {
     setToast({
       id: `${product.id}-${Date.now()}`,
-      message: `¡${product.nombre} añadido al carrito!`
+      message: `¡${product.nombre} añadido al carrito!`,
+      type: 'success'
     });
 
     setCartEntries((currentEntries) => {
@@ -178,7 +179,11 @@ export default function App() {
 
   const sendWhatsAppOrder = () => {
     if (cartItems.length === 0) {
-      window.alert('El carrito está vacío');
+      setToast({
+        id: `empty-cart-${Date.now()}`,
+        message: 'Tu carrito está vacío. Agrega productos primero.',
+        type: 'error'
+      });
       return;
     }
 
@@ -188,7 +193,11 @@ export default function App() {
 
   const sendEmailOrder = () => {
     if (cartItems.length === 0) {
-      window.alert('El carrito está vacío');
+      setToast({
+        id: `empty-cart-${Date.now()}`,
+        message: 'Tu carrito está vacío. Agrega productos primero.',
+        type: 'error'
+      });
       return;
     }
 
@@ -210,7 +219,7 @@ export default function App() {
         onNavigate={navigateTo}
       />
 
-      <main className="min-h-screen">
+      <main className="min-h-screen pb-24 lg:pb-10">
         <HeroSection
           onBrowseProducts={() => navigateTo('catalogo-productos')}
           onOpenCart={() => setIsCartOpen(true)}

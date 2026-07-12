@@ -44,22 +44,22 @@ export function ProductModal({ product, onClose, onAddToCart }) {
                 <p className="text-xs font-bold uppercase tracking-[0.35em] text-brand-text md:text-sm">
                   {product.marca}
                 </p>
-                <h3 className="text-2xl font-black leading-tight text-brand-text md:text-3xl">
+                <h3 className="text-xl font-black leading-tight text-brand-text md:text-xl">
                   {product.nombre}
                 </h3>
               </div>
 
-              <div className="my-4 flex-1 overflow-y-auto pr-2 text-sm leading-relaxed text-brand-text md:text-base">
+              <div className="my-4 flex-1 overflow-y-auto pr-2 text-xs leading-relaxed text-brand-text md:text-base">
                 {product.descripcion}
               </div>
 
-              <div className="mt-4 flex-shrink-0">
-                <div className="flex items-end justify-between border-t border-brand-muted/20 pt-6">
+              <div className="mt-2 flex-shrink-0">
+                <div className="flex items-end justify-between border-t border-brand-muted/20 pt-4">
                   <div className="flex flex-col">
-                    <span className="text-xs font-bold uppercase tracking-[0.3em] text-brand-text md:text-sm">
+                    <span className="text-xs font-bold uppercase tracking-[0.1em] text-brand-text md:text-sm">
                       Precio
                     </span>
-                    <span className="text-3xl font-black text-brand-primary md:text-4xl">
+                    <span className="text-xl font-black text-brand-primary md:text-4xl">
                       ${product.precio.toFixed(2)}
                     </span>
                   </div>
@@ -68,7 +68,7 @@ export function ProductModal({ product, onClose, onAddToCart }) {
                 <button
                   type="button"
                   onClick={() => onAddToCart(product)}
-                  className="mt-6 w-full rounded-2xl bg-brand-primary py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-brand-primary/20 transition-all hover:-translate-y-1 hover:bg-brand-primary/90 hover:shadow-xl hover:shadow-brand-primary/40 active:translate-y-0 md:text-base"
+                  className="mt-2 w-full rounded-2xl bg-brand-primary py-3.5 text-xs font-bold uppercase tracking-wide text-white shadow-lg shadow-brand-primary/20 transition-all hover:-translate-y-1 hover:bg-brand-primary/90 hover:shadow-xl hover:shadow-brand-primary/40 active:translate-y-0 md:text-base"
                 >
                   Agregar al carrito
                 </button>

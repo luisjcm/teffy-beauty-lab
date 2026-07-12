@@ -51,53 +51,58 @@ export function CartDrawer({
   {cartItems.length > 0 ? (
     <ul className="space-y-4">
       {cartItems.map((item) => (
-        <li
-          key={item.id}
-          className="group flex items-start gap-4 rounded-[1.25rem] border border-brand-muted/10 bg-brand-surface p-4 shadow-sm transition-all hover:border-brand-primary/20"
-        >
-          {/* Contenido del Producto */}
-          <div className="min-w-0 flex-1">
-            <p className="font-bold text-brand-text line-clamp-1">{item.nombre}</p>
-            <p className="text-xs text-brand-muted">${item.precio.toFixed(2)} c/u</p>
-            
-            <div className="mt-3 flex items-center gap-3">
-              {/* Controles de Cantidad */}
-              <div className="flex items-center rounded-lg border border-brand-muted/20 bg-brand-background">
-                <button
-                  type="button"
-                  onClick={() => onDecrease(item.id)}
-                  className="flex h-7 w-7 items-center justify-center text-sm font-bold text-brand-text transition hover:text-brand-primary"
-                >
-                  -
-                </button>
-                <span className="w-8 text-center text-xs font-bold text-brand-text">
-                  {item.quantity}
-                </span>
-                <button
-                  type="button"
-                  onClick={() => onIncrease(item.id)}
-                  className="flex h-7 w-7 items-center justify-center text-sm font-bold text-brand-text transition hover:text-brand-primary"
-                >
-                  +
-                </button>
-              </div>
-            </div>
-          </div>
+       
+         <li
+  key={item.id}
+  className="group flex items-center gap-3 rounded-2xl border border-brand-muted/10 bg-brand-surface p-3 shadow-sm transition-all sm:gap-4 sm:p-4"
+>
+  {/* Info central optimizada */}
+  <div className="min-w-0 flex-1">
+    <p className="font-bold leading-tight text-brand-text line-clamp-1 sm:text-base text-sm">
+      {item.nombre}
+    </p>
+    <p className="mt-0.5 text-[10px] font-medium text-brand-muted sm:text-xs">
+      ${item.precio.toFixed(2)} c/u
+    </p>
+    
+    {/* Controles compactos */}
+    <div className="mt-2 flex items-center rounded-lg border border-brand-muted/20 bg-brand-background w-max">
+      <button
+        type="button"
+        onClick={() => onDecrease(item.id)}
+        className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center text-sm font-bold text-brand-text transition hover:text-brand-primary active:bg-brand-muted/10"
+      >
+        -
+      </button>
+      <span className="w-6 text-center text-xs font-bold text-brand-text sm:w-8">
+        {item.quantity}
+      </span>
+      <button
+        type="button"
+        onClick={() => onIncrease(item.id)}
+        className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center text-sm font-bold text-brand-text transition hover:text-brand-primary active:bg-brand-muted/10"
+      >
+        +
+      </button>
+    </div>
+  </div>
 
-          {/* Precio total y Eliminar */}
-          <div className="flex flex-col items-end gap-2">
-            <p className="font-black text-brand-primary">
-              ${(item.precio * item.quantity).toFixed(2)}
-            </p>
-            <button
-              type="button"
-              onClick={() => onRemove(item.id)}
-              className="text-xs font-medium text-brand-muted transition-colors hover:text-red-500"
-            >
-              Eliminar
-            </button>
-          </div>
-        </li>
+  {/* Totales y acción alineados a la derecha */}
+  <div className="flex flex-col items-end justify-between self-stretch">
+    <button
+      type="button"
+      onClick={() => onRemove(item.id)}
+      className="text-[10px] font-bold text-brand-muted transition-colors hover:text-red-500 sm:text-xs"
+      aria-label="Eliminar"
+    >
+      ✕
+    </button>
+    <p className="text-sm font-black text-brand-primary sm:text-base">
+      ${(item.precio * item.quantity).toFixed(2)}
+    </p>
+  </div>
+</li>
+       
       ))}
     </ul>
               ) : (
