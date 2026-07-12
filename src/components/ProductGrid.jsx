@@ -8,7 +8,7 @@ export function ProductGrid({ products, onAddToCart, onViewDetails, searchQuery,
 <div className="mb-10 rounded-[2rem] border border-brand-muted/10 bg-brand-surface p-8 shadow-sm md:flex md:items-center md:justify-between md:gap-8">        
         {/* Textos del Catálogo */}
         <div className="max-w-2xl bg-brand-surface">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-primary">Catálogo</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-primary">Productos</p>
           <h2 className="mt-3 text-2xl font-black text-brand-text sm:text-4xl">
             Productos pensados para un look de alto impacto.
           </h2>
