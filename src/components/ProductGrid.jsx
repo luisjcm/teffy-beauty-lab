@@ -3,7 +3,7 @@ import { ProductCard } from './ProductCard.jsx';
 export function ProductGrid({ products, onAddToCart, onViewDetails, searchQuery, setSearchQuery }) {
   return (
     <section id="catalogo-productos" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 bg-brand-backgroundSoft scroll-mt-[100px]">
-      
+    
       {/* Encabezado y Buscador */}
 <div className="mb-10 rounded-[2rem] border border-brand-muted/10 bg-brand-surface p-8 shadow-sm md:flex md:items-center md:justify-between md:gap-8">        
         {/* Textos del Catálogo */}
