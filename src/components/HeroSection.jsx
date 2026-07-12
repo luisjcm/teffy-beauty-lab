@@ -30,21 +30,7 @@ export function HeroSection({ onBrowseProducts, onOpenCart }) {
               </p>
           </div>
 
-          {/* Botones de Acción */}
-          <div className="mt-8 flex w-full flex-row gap-3 sm:mt-10">
-            <button
-              type="button"
-              onClick={onBrowseProducts}
-              className="flex-1 rounded-2xl bg-brand-primary py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-primary/20 transition-transform active:scale-95"            >
-              Ver productos
-            </button>
-            <button
-              type="button"
-              onClick={onOpenCart}
-              className="flex-1 rounded-2xl bg-brand-surface py-3.5 text-sm font-bold text-brand-text shadow-sm ring-1 ring-inset ring-brand-muted/20 transition-transform active:scale-95"            >
-              Mi carrito
-            </button>
-          </div>
+        
 
           {/* Grid de Atributos de la Tienda */}
           <div className="mt-8 flex flex-wrap justify-center gap-3 sm:mt-10 sm:gap-6">

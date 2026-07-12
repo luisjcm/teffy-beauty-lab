@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @layer base {
+
+  
   body {
     @apply bg-brand-background text-brand-text antialiased selection:bg-brand-primary selection:text-brand-surface;
   }

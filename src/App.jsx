@@ -115,8 +115,9 @@ export default function App() {
   const navigateTo = (sectionId) => {
     const target = document.getElementById(sectionId);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.scrollIntoView({ behavior: 'smooth' });
     }
+    
   };
 
   const toggleMobileMenu = () => {

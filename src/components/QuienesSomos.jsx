@@ -2,7 +2,7 @@ import { assetUrl } from '../utils/assets.js';
 
 export function QuienesSomos() {
   return (
-    <section id="quienes-somos" className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <section id="quienes-somos" className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 scroll-mt-[100px]">
       {/* Contenedor Principal de la Tarjeta */}
       <div className="flex flex-col gap-8 rounded-[2rem] border border-brand-muted/20 bg-brand-surface p-6 shadow-sm md:flex-row md:items-center md:gap-12 lg:p-10">
         
