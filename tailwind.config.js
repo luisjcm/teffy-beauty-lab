@@ -1,14 +1,22 @@
+/** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
-      boxShadow: {
-        glow: '0 20px 80px rgba(244, 63, 94, 0.18)'
-      },
-      fontFamily: {
-        sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif']
+      colors: {
+        brand: {
+          primary: '#F43F5E',
+          surface: '#ffffffe4',
+          background: '#FDFBF7',
+          backgroundSoft: '#F3EFE9', // Un tono arena suave para seccionar
+          text: '#1F2937',
+          muted: '#9CA3AF',
+        }
       }
-    }
+    },
   },
-  plugins: []
-};
+  plugins: [],
+}

@@ -46,6 +46,9 @@ export default function App() {
   const [cartEntries, setCartEntries] = useState(() => getStoredCartEntries());
   const [scrolled, setScrolled] = useState(false);
   const [toast, setToast] = useState(null);
+  
+  // 1. Nuevo Estado para el Buscador
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,6 +76,17 @@ export default function App() {
 
     return () => window.clearTimeout(timeoutId);
   }, [toast]);
+
+  // 2. Nueva Lógica: Filtrado Dinámico de Productos
+  const filteredProducts = useMemo(() => {
+    if (!searchQuery.trim()) return products;
+    
+    const query = searchQuery.toLowerCase();
+    return products.filter((product) => 
+      product.nombre.toLowerCase().includes(query) ||
+      (product.categoria && product.categoria.toLowerCase().includes(query))
+    );
+  }, [searchQuery]);
 
   const cartItems = useMemo(() => {
     return cartEntries
@@ -184,9 +198,8 @@ export default function App() {
   };
 
   return (
-    <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-zinc-900 text-zinc-100">
-      <div className="pointer-events-none absolute left-[-10%] top-[-10%] h-72 w-72 rounded-full bg-rose-500/10 blur-3xl" />
-      <div className="pointer-events-none absolute right-[-10%] top-40 h-72 w-72 rounded-full bg-amber-400/10 blur-3xl" />
+    // 3. Limpieza de Clases del Contenedor Principal
+<div className="relative flex min-h-screen flex-col overflow-x-hidden bg-brand-backgroundSoft text-brand-text transition-colors duration-300">      {/* 4. Eliminamos los Divs de manchas de luz (Glow) que ensucian el diseño claro */}
 
       <Header
         scrolled={scrolled}
@@ -205,10 +218,13 @@ export default function App() {
 
         <QuienesSomos />
 
+        {/* 5. Pasamos los productos filtrados y las funciones de búsqueda a la Grid */}
         <ProductGrid
-          products={products}
+          products={filteredProducts}
           onAddToCart={addToCart}
           onViewDetails={setSelectedProduct}
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
         />
       </main>
 
@@ -237,7 +253,6 @@ export default function App() {
         onSendWhatsApp={sendWhatsAppOrder}
         onSendEmail={sendEmailOrder}
       />
-
 
       <FloatingCart 
         cartCount={cartCount} 

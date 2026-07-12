@@ -10,50 +10,57 @@ export function HeroSection({ onBrowseProducts, onOpenCart }) {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="relative flex w-full flex-col items-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-300 backdrop-blur-xl">
-            Cuidado personal premium
+          {/* Etiqueta Superior (Badge) */}
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-muted/30 bg-brand-surface px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-text shadow-sm">
+            Skincare & Maquillaje
           </div>
 
-          <h1 className="max-w-2xl text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
-            Belleza cotidiana con una estética{' '}
-            <span className="bg-gradient-to-r from-rose-400 via-fuchsia-300 to-amber-300 bg-clip-text text-transparent">
-              elegante y moderna
+          {/* Título Principal */}
+          <h1 className="max-w-2xl text-4xl font-black leading-tight text-brand-text sm:text-5xl lg:text-6xl">
+            Realza tu belleza natural con rutinas de{' '}
+            <span className="text-brand-primary">
+              alta calidad
             </span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 sm:text-lg">
-            Descubre un e-commerce renovado con navegación fluida, tarjetas animadas y una experiencia de compra más limpia, visual y premium.
-          </p>
+          {/* Subtítulo */}
+          <div className="mt-6 max-w-xl rounded-3xl bg-brand-surface/60 p-6 backdrop-blur-sm border border-brand-muted/10">
+              <p className="text-base leading-8 text-brand-text sm:text-lg">
+                Cuidamos de tu piel. Explora nuestra selección curada de cosméticos, mascarillas y tratamientos faciales diseñados para hacerte brillar todos los días.
+              </p>
+          </div>
 
+          {/* Botones de Acción */}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button
               type="button"
               onClick={onBrowseProducts}
-              className="rounded-full bg-gradient-to-r from-rose-500 to-amber-400 px-6 py-3 font-bold text-zinc-950 shadow-2xl shadow-rose-500/20 transition hover:scale-[1.02]"
+              className="rounded-full bg-brand-primary px-6 py-3 font-bold text-white shadow-xl shadow-brand-primary/20 transition hover:scale-[1.02] hover:bg-brand-primary/90"
             >
-              Explorar catálogo
+              Ver productos
             </button>
             <button
               type="button"
               onClick={onOpenCart}
-              className="rounded-full border border-white/10 bg-white/5 px-6 py-3 font-bold text-zinc-100 backdrop-blur-xl transition hover:border-rose-400/30 hover:bg-white/10"
+              className="rounded-full border-2 border-brand-muted/30 bg-brand-surface px-6 py-3 font-bold text-brand-text shadow-sm transition hover:border-brand-primary hover:text-brand-primary"
             >
-              Ver carrito
+              Mi carrito
             </button>
           </div>
 
+          {/* Grid de Atributos de la Tienda */}
           <div className="mt-10 grid w-full max-w-2xl grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
-              <p className="text-sm text-zinc-400">Catálogo</p>
-              <p className="mt-1 text-lg font-bold text-white">9 productos</p>
+            <div className="rounded-2xl border border-brand-muted/20 bg-brand-surface p-4 shadow-sm">
+              <p className="text-sm text-brand-text">Productos</p>
+              <p className="mt-1 text-lg font-bold text-brand-text">100% Originales</p>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
-              <p className="text-sm text-zinc-400">Entrega</p>
-              <p className="mt-1 text-lg font-bold text-white">Rápida</p>
+            <div className="rounded-2xl border border-brand-muted/20 bg-brand-surface p-4 shadow-sm">
+              <p className="text-sm text-brand-text">Envíos</p>
+              <p className="mt-1 text-lg font-bold text-brand-text">Nacionales</p>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
-              <p className="text-sm text-zinc-400">Estilo</p>
-              <p className="mt-1 text-lg font-bold text-white">Premium</p>
+            <div className="rounded-2xl border border-brand-muted/20 bg-brand-surface p-4 shadow-sm">
+              <p className="text-sm text-brand-text">Asesoría</p>
+              <p className="mt-1 text-lg font-bold text-brand-text">Personalizada</p>
             </div>
           </div>
         </motion.div>

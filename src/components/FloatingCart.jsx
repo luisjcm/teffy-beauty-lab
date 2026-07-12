@@ -4,14 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 export function FloatingCart({ cartCount, onOpenCart }) {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Escuchar el scroll de la ventana
   useEffect(() => {
     const handleScroll = () => {
-      // El botón aparece mágicamente después de bajar 300px
       setIsVisible(window.scrollY > 300);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -25,7 +23,7 @@ export function FloatingCart({ cartCount, onOpenCart }) {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={onOpenCart}
-          className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg shadow-rose-500/40 transition-colors hover:bg-rose-600 sm:bottom-8 sm:right-8"
+          className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-brand-primary text-white shadow-lg shadow-brand-primary/40 transition-colors hover:bg-brand-primary/90 sm:bottom-8 sm:right-8"
           aria-label="Abrir carrito"
         >
           {/* Icono de Carrito SVG */}
@@ -35,12 +33,12 @@ export function FloatingCart({ cartCount, onOpenCart }) {
             <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
           </svg>
 
-          {/* Burbuja con el número de productos (Solo aparece si hay items) */}
+          {/* Burbuja con el número de productos */}
           {cartCount > 0 && (
             <motion.span 
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-zinc-950 bg-white text-xs font-bold text-zinc-900"
+              className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-brand-surface bg-brand-text text-xs font-bold text-brand-surface"
             >
               {cartCount}
             </motion.span>

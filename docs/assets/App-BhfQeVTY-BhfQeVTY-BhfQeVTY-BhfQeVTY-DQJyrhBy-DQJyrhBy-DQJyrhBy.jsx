@@ -192,7 +192,7 @@ export default function App() {
               <h2 className="max-w-2xl text-3xl font-black text-white sm:text-4xl">
                 Una tienda pensada para resaltar la belleza natural con una experiencia más humana y elegante.
               </h2>
-              <div className="space-y-4 text-zinc-300 leading-8">
+              <div className="space-y-4 text-brand-text leading-8">
                 <p>
                   En <strong>Teffy's</strong> nos apasiona seleccionar productos de cuidado personal y cosméticos que combinan calidad, confianza y estilo.
                 </p>

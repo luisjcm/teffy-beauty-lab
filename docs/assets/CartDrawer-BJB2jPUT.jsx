@@ -32,7 +32,7 @@ export function CartDrawer({
           >
             <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">Carrito</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-text">Carrito</p>
                 <h3 className="mt-2 text-2xl font-black text-white">Tu Drawer</h3>
               </div>
               <button
@@ -105,7 +105,7 @@ export function CartDrawer({
                 <span className="font-semibold text-zinc-100">{cartCount}</span>
               </div>
               <div className="mt-2 flex items-center justify-between">
-                <span className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">Total</span>
+                <span className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-text">Total</span>
                 <span className="text-2xl font-black text-rose-400">${cartTotal.toFixed(2)}</span>
               </div>
 

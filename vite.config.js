@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react-swc';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // CRÍTICO: El nombre exacto de tu repositorio
+  base: './', 
   build: {
-    outDir: 'docs', // Vite creará la carpeta 'docs' para GitHub Pages
-    emptyOutDir: true // Limpia la carpeta antes de cada nuevo build
+    outDir: 'docs', 
+    emptyOutDir: true 
   }
 });
