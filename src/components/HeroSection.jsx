@@ -16,7 +16,7 @@ export function HeroSection({ onBrowseProducts, onOpenCart }) {
           </div>
 
           {/* Título Principal */}
-          <h1 className="max-w-2xl text-4xl font-black leading-tight text-brand-text sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-2xl text-3xl font-black leading-tight text-brand-text sm:text-5xl lg:text-6xl">
             Realza tu belleza natural con rutinas de{' '}
             <span className="text-brand-primary">
               alta calidad
@@ -25,7 +25,7 @@ export function HeroSection({ onBrowseProducts, onOpenCart }) {
 
           {/* Subtítulo */}
           <div className="mt-6 max-w-xl rounded-3xl bg-brand-surface/60 p-6 backdrop-blur-sm border border-brand-muted/10">
-              <p className="text-base leading-8 text-brand-text sm:text-lg">
+              <p className="text-base leading-5 text-brand-text sm:text-lg">
                 Cuidamos de tu piel. Explora nuestra selección curada de cosméticos, mascarillas y tratamientos faciales diseñados para hacerte brillar todos los días.
               </p>
           </div>

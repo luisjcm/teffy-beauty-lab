@@ -9,10 +9,10 @@ export function ProductGrid({ products, onAddToCart, onViewDetails, searchQuery,
         {/* Textos del Catálogo */}
         <div className="max-w-2xl bg-brand-surface">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-primary">Catálogo</p>
-          <h2 className="mt-3 text-3xl font-black text-brand-text sm:text-4xl">
+          <h2 className="mt-3 text-2xl font-black text-brand-text sm:text-4xl">
             Productos pensados para un look de alto impacto.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-brand-text">
+          <p className="mt-4 text-base leading-5 text-brand-text">
             Una selección curada con acciones directas y una experiencia visual más limpia para tu rutina de belleza.
           </p>
         </div>

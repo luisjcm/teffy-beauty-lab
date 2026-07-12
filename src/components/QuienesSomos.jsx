@@ -9,10 +9,10 @@ export function QuienesSomos() {
         {/* Columna de Texto */}
         <div className="w-full md:w-1/2">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-primary">Quiénes Somos</p>
-          <h2 className="mt-3 max-w-2xl text-3xl font-black text-brand-text sm:text-4xl">
+          <h2 className="mt-3 max-w-2xl text-2xl font-black text-brand-text sm:text-4xl">
             Una tienda pensada para resaltar la belleza natural con una experiencia más humana y elegante.
           </h2>
-          <div className="mt-6 space-y-4 leading-8 text-brand-text">
+          <div className="mt-6 space-y-4 leading-5 text-brand-text">
             <p>
               En <strong className="font-bold text-brand-text">Teffy's</strong> nos apasiona seleccionar productos de cuidado personal y cosméticos que combinan calidad, confianza y estilo.
             </p>

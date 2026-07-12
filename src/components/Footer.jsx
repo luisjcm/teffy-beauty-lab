@@ -13,7 +13,7 @@ export function Footer() {
             <span className="mt-1 text-3xl font-black tracking-tight text-brand-primary">
               Beauty Lab
             </span>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-brand-text">
+            <p className="mt-4 max-w-sm text-sm leading-5 text-brand-text">
               Cuidamos de tu piel con una selección curada de productos de alta calidad, diseñados para resaltar tu belleza natural todos los días.
             </p>
             {/* El correo ahora es un "botón/píldora" en lugar de texto plano */}
@@ -49,7 +49,7 @@ export function Footer() {
               <ul className="mt-6 space-y-4">
                 {['Envíos', 'Devoluciones', 'Privacidad'].map((item) => (
                   <li key={item}>
-                    <a href="#" className="group flex items-center justify-center sm:justify-start text-sm font-medium text-brand-text transition-all hover:text-brand-primary hover:translate-x-1">
+                    <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="group flex items-center justify-center sm:justify-start text-sm font-medium text-brand-text transition-all hover:text-brand-primary hover:translate-x-1">
                       {item}
                     </a>
                   </li>
@@ -76,12 +76,28 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright con Flex-Between */}
-<div className="mt-16 flex flex-col items-center justify-center border-t border-brand-muted/10 pt-8 sm:flex-row sm:justify-between sm:px-16 lg:px-24">          <p className="text-[11px] font-medium text-brand-text">
+        {/* Copyright y Créditos */}
+        <div className="mt-16 flex flex-col items-center justify-center border-t border-brand-muted/10 pt-8 sm:flex-row sm:justify-between sm:px-16 lg:px-24">
+          
+          {/* Lado izquierdo: Derechos reservados */}
+          <p className="text-sm font-medium text-brand-text">
             © 2026 Teffy's Beauty Lab. Todos los derechos reservados.
           </p>
-          <p className="mt-3 flex items-center gap-1 text-[11px] font-medium text-brand-text sm:mt-0">
-            Diseñado para resaltar tu belleza <span className="text-brand-primary">✨</span>
+
+          {/* Lado derecho: Créditos (Desarrollo) */}
+          <p className="mt-3 flex items-center gap-2 text-sm font-medium text-brand-muted sm:mt-0">
+           
+            <span className="flex items-center gap-1 text-brand-text">
+              Desarrollado por 
+              <a 
+                href="https://github.com/luisjcm" // Cambia esto por tu enlace real
+                target="_blank" 
+                rel="noreferrer" 
+                className="font-black text-brand-primary transition-colors hover:underline"
+              >
+                luisjcm
+              </a>
+            </span>
           </p>
         </div>
       </div>
